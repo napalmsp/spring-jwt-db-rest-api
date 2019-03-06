@@ -10,12 +10,12 @@ public class StartHSQLDB {
 		server();
 	}
 
-	static void local() {
+	public static void local() {
 		final String[] dbArgs = { "--user", "sa", "--password", "", "--url", "jdbc:hsqldb:" + FILE_URL };
 		DatabaseManagerSwing.main(dbArgs);
 
 	}
-	static void server() {
+	public static void server() {
 		final String[] dbArgs = { "--database.0", FILE_URL, "--dbname.0", "webapidb", "--port", "5454" };
 		org.hsqldb.server.Server.main(dbArgs);
 		final String[] serveArgs = { "--user", "sa", "--password", "", "--url", "jdbc:hsqldb:hsql://localhost:5454/webapidb"};

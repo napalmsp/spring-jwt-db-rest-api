@@ -17,6 +17,7 @@ mvnw.cmd
 .sencha
 .history/
 hs_err_pid*
+package-lock.json
 
 #Diretorios
 /.mvnw/
