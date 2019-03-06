@@ -4,6 +4,7 @@
 - Execute a classe **WebApiApplication**;
 - Para exibir a documentação com Swagger, no navegador digite [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) 
 - Com o Swagger cadastre duas roles (ADMIN e USER) e em seguida um Usuario, pois as consultas precisam de autenticação com usuario com role ADMIN
+- Se estiver usando o banco H2 em modo console http://localhost:8080/h2-console. Cadastre as roles e usuarios ADMIN e USER
 
 * USUARIO ADMIN
 
