@@ -1,0 +1,8 @@
+package open.digytal.webapi.model;
+
+public enum  Roles {
+    USER,
+    ADMIN;
+	public static final String PRE_USER= "hasRole('USER')";
+	public static final String PRE_ADMIN= "hasRole('ADMIN')";
+}
