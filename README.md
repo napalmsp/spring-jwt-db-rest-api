@@ -1,2 +1,3 @@
-# java-jwt-db-rest-api
-Exemplo de Aplicação REST com Java - JWT - Swagger
+# Spring JWT
+Exemplo de Aplicação REST com Spring - JWT - HSQLDB - Swagger
+
