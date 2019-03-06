@@ -7,7 +7,7 @@
 	<groupId>open.digytal</groupId>
 	<artifactId>spring-jwt-db-rest-api</artifactId>
 	<version>1.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>WEB - Api</name>
 	<description>API Rest com Spring - JWT - HSQLDB - SWAGGER</description>
@@ -67,12 +67,13 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
-		<!-- WAR FILE -->
+		<!-- WAR FILE 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		-->
 	</dependencies>
 
 	<build>
