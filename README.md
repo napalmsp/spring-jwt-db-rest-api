@@ -5,6 +5,8 @@
 - Para exibir a documentação com Swagger, no navegador digite [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html) 
 - Com o Swagger cadastre duas roles (ADMIN e USER) e em seguida um Usuario, pois as consultas precisam de autenticação com usuario com role ADMIN
 
+* USUARIO ADMIN
+
 > {
   "email": "admin@admin.com.br",
   "login": "admin",
@@ -17,7 +19,8 @@
   "senha": "admin"
 }
 
-{
+* USUARIO USER
+> {
   "email": "user@user.com.br",
   "login": "user",
   "nome": "USUARIO",

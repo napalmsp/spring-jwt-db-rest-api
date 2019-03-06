@@ -23,7 +23,7 @@ public class UserService implements UserDetailsService{
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Usuario user = repository.findByLogin(username);
 		if(user == null){
-			throw new UsernameNotFoundException("Invalid username or password.");
+			throw new UsernameNotFoundException("Usuário não existe");
 		}
 		Set<SimpleGrantedAuthority> roles=getAuthority(user);
 		return new org.springframework.security.core.userdetails.User(user.getLogin(), user.getSenha(), roles);
