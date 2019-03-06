@@ -6,8 +6,8 @@ public class StartHSQLDB {
 	static String FILE_URL = "file:/digytal/webapi/database/webapidb";
 
 	public static void main(String[] args) {
-		local();
-		//server();
+		//local();
+		server();
 	}
 
 	static void local() {
@@ -16,7 +16,9 @@ public class StartHSQLDB {
 
 	}
 	static void server() {
-		final String[] dbArg = { "--database.0", FILE_URL, "--dbname.0", "cfipdb", "--port", "5454" };
-		org.hsqldb.server.Server.main(dbArg);
+		final String[] dbArgs = { "--database.0", FILE_URL, "--dbname.0", "webapidb", "--port", "5454" };
+		org.hsqldb.server.Server.main(dbArgs);
+		final String[] serveArgs = { "--user", "sa", "--password", "", "--url", "jdbc:hsqldb:hsql://localhost:5454/webapidb"};
+		DatabaseManagerSwing.main(serveArgs);
 	}
 }
