@@ -17,5 +17,17 @@
   "senha": "admin"
 }
 
+{
+  "email": "user@user.com.br",
+  "login": "user",
+  "nome": "USUARIO",
+  "roles": [
+    {
+      "nome": "USER"
+    }
+  ],
+  "senha": "user"
+}
+
 ![Swagger](https://github.com/digytal/spring-jwt-db-rest-api/blob/master/src/main/resources/api.JPG)
 

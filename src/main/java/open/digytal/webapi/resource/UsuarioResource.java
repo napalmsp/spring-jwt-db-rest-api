@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +19,7 @@ import open.digytal.webapi.model.Roles;
 import open.digytal.webapi.model.Usuario;
 import open.digytal.webapi.repository.RoleRepository;
 import open.digytal.webapi.repository.UsuarioRepository;
+import open.digytal.webapi.secutiry.JwtSession;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -37,8 +40,9 @@ public class UsuarioResource {
 		return repository.findAll();
 	}
 	@GetMapping(value="/roles")
-	@PreAuthorize(Roles.PRE_ADMIN)
+	@PreAuthorize(Roles.PRE_USER_ADMIN)
 	public List<Role> listarRoles() {
+		System.out.println(JwtSession.getLogin());
 		return roleRepository.findAll();
 	}
 	@PostMapping
