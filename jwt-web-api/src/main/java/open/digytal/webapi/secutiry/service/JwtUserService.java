@@ -15,7 +15,7 @@ import open.digytal.webapi.repository.UsuarioRepository;
 
 
 @Service(value = "userService")
-public class UserService implements UserDetailsService{
+public class JwtUserService implements UserDetailsService{
 	
 	@Autowired
 	private UsuarioRepository repository;

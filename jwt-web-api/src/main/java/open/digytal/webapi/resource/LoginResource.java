@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import open.digytal.webapi.secutiry.JwtToken;
 import open.digytal.webapi.secutiry.JwtTokenProvider;
-import open.digytal.webapi.secutiry.Login;
+import open.digytal.webapi.secutiry.JwtLogin;
 
 @RestController
 @RequestMapping("/login")
@@ -26,7 +26,7 @@ public class LoginResource {
     private JwtTokenProvider jwtTokenUtil;
 
     @PostMapping
-    public ResponseEntity<?> sigin(@RequestBody Login login) throws AuthenticationException {
+    public ResponseEntity<?> sigin(@RequestBody JwtLogin login) throws AuthenticationException {
         final Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                 		login.getUsername(),
